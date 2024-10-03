@@ -1,13 +1,13 @@
 import './App.css';
 import Header from './components/Header.jsx';
-import SearchForm from './components/SearchForm.jsx'
+import SearchContainer from './components/SearchContainer.jsx';
 
 function App() {
 
   return (
     <>
       <Header />
-      <SearchForm />
+      <SearchContainer />
     </>
   );
 };

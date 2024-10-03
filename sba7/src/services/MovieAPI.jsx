@@ -1,6 +1,6 @@
-const API_KEY = process.env.APIKEYM;
+const API_KEY = import.meta.env.VITE_APIKEY;
 
-export const searchMovies = (searchTerm) => {
+function SearchMovies (searchTerm) {
   return new Promise((resolve, reject) => {
     const searchRequest = new XMLHttpRequest();
     searchRequest.open('GET', `http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}`, true);
@@ -21,3 +21,5 @@ export const searchMovies = (searchTerm) => {
     searchRequest.send();
   });
 };
+
+export default SearchMovies;
