@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function SearchForm({ onSearch }){
   const [searchTerm, setSearchTerm] = useState('');
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(searchTerm);
   };
